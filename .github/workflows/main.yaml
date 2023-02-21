@@ -22,9 +22,9 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: |
-        npm test
-        if [ $? -eq 0 ]; then
-          exit 0
-        else
-          exit 1
-        fi
+          npm test
+          if [ $? -eq 0 ]; then
+            exit 0
+          else
+            exit 1
+          fi
