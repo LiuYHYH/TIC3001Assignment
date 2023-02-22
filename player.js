@@ -1,4 +1,4 @@
-const Player = class {
+const player = class {
     constructor(id, name, team) {
         this.id = id;
         this.name = name;
@@ -13,5 +13,3 @@ const Player = class {
         }
     }
 }
-
-export default Player
