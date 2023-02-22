@@ -45,8 +45,8 @@ describe('API tests', function () {
   // Test PUT request
   it('should update a player when PUT /players/:id', function (done) {
     const updatedPlayer = {
-      name: 'LeBron James',
-      team: 'Lakers'
+      name: 'Ja Morant',
+      team: 'Grizzlies'
     };
     chai
       .request(base_url)
