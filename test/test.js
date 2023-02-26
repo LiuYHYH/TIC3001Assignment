@@ -6,6 +6,7 @@ const chaiHttp = require('chai-http');
 const expect = chai.expect;
 
 const mocha = require('mocha');
+const { assert } = require('chai');
 const describe = mocha.describe;
 const it = mocha.it;
 const base_url = "http://127.0.0.1:3000"
