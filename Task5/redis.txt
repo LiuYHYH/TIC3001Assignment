@@ -1,0 +1,37 @@
+const { json } = require('body-parser');
+const { response } = require('express');
+const redis = require('redis');
+const client = redis.createClient();
+  
+  client.get('mydata', (err, result) => {
+    if (err) throw err;
+
+    // If the data is not in Redis, retrieve it from the database
+    if (result === null) {
+      // Retrieve data from database
+      const data = () => {
+        return fetch('https://jsonplaceholder.typicode.com/todos')
+          .then(response => response.json())
+          .then(json => {
+            const jdata = json;
+            set_redis(data);
+          return jdata;
+          });
+      };
+      ; //TODO 
+
+      // Store the data in Redis for future use
+      client.set('mydata', JSON.stringify(data));
+
+      // Send the data to the client
+      res.json(data);
+    } else {
+      // If the data is in Redis, send it to the client
+      res.json(JSON.parse(result));
+    }
+  });
+  // if (!is_redis) {
+  //   fetch('https://jsonplaceholder.typicode.com/todos')
+  //     .then(response => response.json())
+  //     .then(json => set_redis(json))
+  // }
