@@ -13,12 +13,6 @@ let players = [
   { id: 2, name: 'Luka Doncic', team: 'Mavericks' },
   { id: 3, name: 'Michael Jordan', team: 'Bulls' },
   { id: 4, name: 'Jayson Tatum', team: 'Celtics' },
-  { id: 5, name: 'Devin Booker', team: 'Suns' },
-  { id: 6, name: 'Kawhi Leonard', team: 'Clippers' },
-  { id: 7, name: 'Donovan Mitchell', team: 'Cavaliers' },
-  { id: 8, name: 'Joel Embiid', team: '76ers' },
-  { id: 9, name: 'Nikola Jokic', team: 'Nuggets' },
-  { id: 10, name: 'Jimmy Butler', team: 'Heat' },
 ];
 
 app.get('/players', (req, res) => {
