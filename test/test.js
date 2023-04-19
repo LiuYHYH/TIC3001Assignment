@@ -1,4 +1,4 @@
-const app = require('../api'); // replace with the name of your API file
+const app = require('../app'); // replace with the name of your API file
 const request = require('supertest');
 
 const chai = require('chai');
